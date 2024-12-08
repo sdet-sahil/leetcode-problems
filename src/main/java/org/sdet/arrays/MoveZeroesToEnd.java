@@ -7,7 +7,7 @@ public class MoveZeroesToEnd {
         for(int i = 0; i < arr.length; i++){
             if(arr[i] == 0)
                 bucketSize += 1;
-            else {
+            else if (bucketSize > 0) {
                 int tmp = arr[i];
                 arr[i] = 0;
                 arr[i-bucketSize] = tmp;
